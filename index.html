@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To-Do Life Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+    <button id="theme-toggle" title="Toggle theme">🌙</button>
+  <div class="container">
+
+    <!-- GREETING -->
+    <div class="greeting-card">
+        <div id="clock">00:00:00</div>
+        <div id="date"></div>
+        <div id="greeting-text">Good Morning</div>
+    </div>
+
+    <!-- MAIN GRID -->
+    <div class="main-grid">
+
+        <!-- FOCUS TIMER -->
+        <div class="card">
+        <h2>Focus Timer</h2>
+        <div id="timer-display">25:00</div>
+        <div class="pomo-settings">
+            <label for="pomo-duration">Durasi (menit):</label>
+            <input type="number" id="pomo-duration" value="25" min="1" max="120" />
+            <button id="apply-duration">Terapkan</button>
+        </div>
+        <div class="timer-controls">
+            <button id="timer-start">Start</button>
+            <button id="timer-stop">Stop</button>
+            <button id="timer-reset">Reset</button>
+        </div>
+        </div>
+
+        <!-- TASKS -->
+        <div class="card">
+        <h2>Tasks</h2>
+        <div class="task-form">
+            <input id="task-input" type="text" placeholder="Add a new task..." autocomplete="off" />
+            <button id="task-add-btn">Add</button>
+        </div>
+        <p id="task-error"></p>
+        <ul id="task-list"></ul>
+        </div>
+
+        <!-- QUICK LINKS -->
+        <div class="card quick-links-card">
+        <h2>Quick Links</h2>
+        <div class="link-form">
+            <input id="link-label" type="text" placeholder="Link name" autocomplete="off" />
+            <input id="link-url" type="url" placeholder="URL" autocomplete="off" />
+            <button id="link-add-btn">Add Link</button>
+        </div>
+        <p id="link-error"></p>
+        <div id="link-buttons"></div>
+        </div>
+
+    </div>
+    </div>
+
+  <!-- Modal Custom Name (opsional, pakai prompt untuk simplicity) -->
+
+  <script src="js/app.js"></script>
+</body>
+</html>
